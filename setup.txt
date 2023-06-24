@@ -1,0 +1,12 @@
+
+1) Configure LB URLs
+- first http://wp-crm-poc.sompotest.com
+- later for sompo-intl.com
+
+2) wordpress / *********
+
+3)  == Installation ==
+   1. Download archive and unzip in wp-content/plugins or install via Plugins - Add New.
+   2. Activate the plugin through the Plugins menu in WordPress.
+
+
