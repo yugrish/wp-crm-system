@@ -16,12 +16,271 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.2.0",
-        "cells": [],
+        "cells": [
+          {
+            "position": {
+              "x": 500,
+              "y": 200
+            },
+            "size": {
+              "width": 220,
+              "height": 210
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Public-Facing"
+              }
+            },
+            "id": "b04b9548-6570-4c71-9d94-b3b7ae044cd6",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Public-Facing",
+              "description": "Web front end",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 846,
+              "y": 200
+            },
+            "size": {
+              "width": 180,
+              "height": 210
+            },
+            "shape": "trust-boundary-box",
+            "id": "c0779171-132a-407c-a889-fb2c040b707d",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 175,
+              "y": 275
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "user"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "1c19d61c-4544-442d-b750-dac081efa3e9",
+            "zIndex": 0,
+            "data": {
+              "type": "tm.Actor",
+              "name": "user",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "providesAuthentication": false,
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "f766c0e7-f3b0-4110-b5e7-6dfc18d44cfb",
+            "source": {
+              "x": 290,
+              "y": 310
+            },
+            "target": {
+              "cell": "21431eae-95a1-4928-8bcf-52c5b5152544"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "2fa7671f-5461-4f77-a060-ef7da15fd372",
+            "source": {
+              "cell": "21431eae-95a1-4928-8bcf-52c5b5152544"
+            },
+            "target": {
+              "cell": "b67064d5-5cfa-4250-8464-540abaab92d0"
+            },
+            "vertices": [
+              {
+                "x": 780,
+                "y": 318
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 876,
+              "y": 275
+            },
+            "size": {
+              "width": 120,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "MySQL"
+              },
+              "topLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              },
+              "bottomLine": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "b67064d5-5cfa-4250-8464-540abaab92d0",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Store",
+              "name": "MySQL",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isALog": false,
+              "isEncrypted": false,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false,
+              "threats": [
+                {
+                  "id": "a0e73b86-8722-4c83-895c-be3a58d7d41d",
+                  "title": "SQL injection, IDOR, other",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Web-based attempts to access private data via UI bypasses",
+                  "mitigation": "Continuous testing",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "50"
+                }
+              ]
+            }
+          },
+          {
+            "position": {
+              "x": 580,
+              "y": 285
+            },
+            "size": {
+              "width": 60,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Wordpress"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "21431eae-95a1-4928-8bcf-52c5b5152544",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Process",
+              "name": "Wordpress",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": true,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          }
+        ],
         "description": ""
       }
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
